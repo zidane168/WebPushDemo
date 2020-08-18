@@ -1,0 +1,37 @@
+{
+    "to": "d0x-iY4TdLTViddcg-TiTI:APA91bGIYtLd_Txl0uHxR2YYHYPwFCvoB_-nD0MtZTq_WmU80cPCwKpkDZsPEhRqxHhCU6NuSBvbatWnD5rhhbd_h6YNRJCcq4cOnSitWRckVw8XLqHxXumYlpgOVI0rnwJ6PEoE8BvT"
+    "notification": {
+        "title": "New information!!!",
+        "body": "How are you today?",
+        "icon": "logo.png"
+    }
+}
+
+//AAAAbh_J-nI:APA91bGn1OssamQlG4R1v84yXOv-6oynz1i4eNltzQLd5ojIiFSHvnCFHJyA33QcRfeAMa5As2mjfEjkRA_1LfXA-YM8gsqEQssm3Ykrn8FSBENqwkot5KPWY0zMefYB1RZj1ZlZfsWy
+-> this key look up on Project Overview -> settings -> Cloud Messaging -> server key -> AAAAbh_J-nI:APA91bGn1OssamQlG4R1v84yXOv-6oynz1i4eNltzQLd5ojIiFSHvnCFHJyA33QcRfeAMa5As2mjfEjkRA_1LfXA-YM8gsqEQssm3Ykrn8FSBENqwkot5KPWY0zMefYB1RZj1ZlZfsWy
+
+chrome
+
+curl --header "Authorization: key=AAAAbh_J-nI:APA91bGn1OssamQlG4R1v84yXOv-6oynz1i4eNltzQLd5ojIiFSHvnCFHJyA33QcRfeAMa5As2mjfEjkRA_1LfXA-YM8gsqEQssm3Ykrn8FSBENqwkot5KPWY0zMefYB1RZj1ZlZfsWy" --header "Content-Type: application/json" -d '{"to": "d0x-iY4TdLTViddcg-TiTI:APA91bGIYtLd_Txl0uHxR2YYHYPwFCvoB_-nD0MtZTq_WmU80cPCwKpkDZsPEhRqxHhCU6NuSBvbatWnD5rhhbd_h6YNRJCcq4cOnSitWRckVw8XLqHxXumYlpgOVI0rnwJ6PEoE8BvT", "notification": {"title": "New information!!!", "body": "How are you today? received push succeed", "icon": "logo.png"}}' https://fcm.googleapis.com/fcm/send
+
+curl --header "Authorization: key=AAAAbh_J-nI:APA91bGn1OssamQlG4R1v84yXOv-6oynz1i4eNltzQLd5ojIiFSHvnCFHJyA33QcRfeAMa5As2mjfEjkRA_1LfXA-YM8gsqEQssm3Ykrn8FSBENqwkot5KPWY0zMefYB1RZj1ZlZfsWy" --header "Content-Type: application/json" -d '{"to": "d0x-iY4TdLTViddcg-TiTI:APA91bGIYtLd_Txl0uHxR2YYHYPwFCvoB_-nD0MtZTq_WmU80cPCwKpkDZsPEhRqxHhCU6NuSBvbatWnD5rhhbd_h6YNRJCcq4cOnSitWRckVw8XLqHxXumYlpgOVI0rnwJ6PEoE8BvT", "notification": {"title": "New information!!!", "body": "How are you today? received push succeed", "icon": "logo.png"}}' https://fcm.googleapis.com/fcm/send
+
+
+
+
+
+
+{
+    "to": "d0x-iY4TdLTViddcg-TiTI:APA91bGIYtLd_Txl0uHxR2YYHYPwFCvoB_-nD0MtZTq_WmU80cPCwKpkDZsPEhRqxHhCU6NuSBvbatWnD5rhhbd_h6YNRJCcq4cOnSitWRckVw8XLqHxXumYlpgOVI0rnwJ6PEoE8BvT"
+    "data": {
+        "status": "New information!!! ^_^ how are you???"
+    }
+}
+curl --header "Authorization: key=AAAAbh_J-nI:APA91bGn1OssamQlG4R1v84yXOv-6oynz1i4eNltzQLd5ojIiFSHvnCFHJyA33QcRfeAMa5As2mjfEjkRA_1LfXA-YM8gsqEQssm3Ykrn8FSBENqwkot5KPWY0zMefYB1RZj1ZlZfsWy" --header "Content-Type: application/json" -d '{"to": "d0x-iY4TdLTViddcg-TiTI:APA91bGIYtLd_Txl0uHxR2YYHYPwFCvoB_-nD0MtZTq_WmU80cPCwKpkDZsPEhRqxHhCU6NuSBvbatWnD5rhhbd_h6YNRJCcq4cOnSitWRckVw8XLqHxXumYlpgOVI0rnwJ6PEoE8BvT", "data": {"status": "New information!!!"}}' https://fcm.googleapis.com/fcm/send
+
+
+
+firefox
+
+curl --header "Authorization: key=AAAAbh_J-nI:APA91bGn1OssamQlG4R1v84yXOv-6oynz1i4eNltzQLd5ojIiFSHvnCFHJyA33QcRfeAMa5As2mjfEjkRA_1LfXA-YM8gsqEQssm3Ykrn8FSBENqwkot5KPWY0zMefYB1RZj1ZlZfsWy" --header "Content-Type: application/json" -d '{"to": "f8UQCp0VHqCrBR0I5Jr8x0:APA91bHuqLN7Wp40U2Wt8LS3VcRipttiViYF4TXHKP1Rusdov542XEgUYaVk9GIAEM3Q2kHcME5D85BsyWg7vk3H3oLhKJdNQLSNyoxzfnhGAvuQo4BiTZ43sIdVGQ7t86WQDn6s9HBj", "data": {"status": "New information!!!"}}' https://fcm.googleapis.com/fcm/send
+
