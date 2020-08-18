@@ -47,7 +47,7 @@ function gen_curl() {
     var to =  $('#my_token').text();
     var title = "Congratulation";
     var body = "You had received push successfully!!!";
-    var icon = "/logo.png";
+    var icon = "logo.png";
     var url = "https://fcm.googleapis.com/fcm/send";
     var command = 'curl --header "Authorization: key=' + key + '" --header "Content-Type: application/json" -d \'{"to": "' + to + '", ';
     command += '"notification": {"title": "' + title + '", "body": "' + body + '", "icon": "' + icon + '"}}\' ' + url;
