@@ -47,7 +47,7 @@ PUSH THE FILE firebase-messaging-sw.js to ROOT folder for receive chat (check cl
 
 XAMPP/htdocs/firebase-messaging-sw.js
 
-dont have this file wil cause cant push
+don't have this file wil cause cant push
 
 
 // --------------------------------
@@ -72,7 +72,7 @@ messaging.requestPermission()
 
 // --------------------------------
 // step 5 -------------------------
-// show message on Meassge when push 
+// show message on Message when push 
 // --------------------------------
 
 messaging.onMessage(function(payload) {
@@ -91,7 +91,7 @@ curl --header "Authorization: key=AAAAbh_J-nI:APA91bGn1OssamQlG4R1v84yXOv-6oynz1
 
 
 CHECKED:
-firefox -> ok (79.0 (64-bit)) MACOS
-browser -> ok (Version 84.0.4147.125 (Official Build) (64-bit)) MACOS
-safari -> cannot push (dont support firebase)
-IE -> cant check -> using MACOS
+firefox -> ok (79.0 (64-bit)) MAC OS
+browser -> ok (Version 84.0.4147.125 (Official Build) (64-bit)) MAC OS
+safari -> cannot push (don't support firebase)
+IE -> cant check -> using MAC OS
