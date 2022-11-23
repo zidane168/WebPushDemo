@@ -1,0 +1,97 @@
+
+
+How to build this app;
+// --------------------------------
+// step 1 -------------------------
+// --------------------------------
+
+go to Cloud message -> add new app -> copy config to app.js
+
+var firebaseConfig = {
+  apiKey: "AIzaSyDVXPqEEVGfslWei8SRvlsdUzBBj4Bhr20",
+  authDomain: "gpstrackmobiledi-1523763304572.firebaseapp.com",
+  databaseURL: "https://gpstrackmobiledi-1523763304572.firebaseio.com",
+  projectId: "gpstrackmobiledi-1523763304572",
+  storageBucket: "gpstrackmobiledi-1523763304572.appspot.com",
+  messagingSenderId: "472979733106",
+  appId: "1:472979733106:web:fceaf7f9b91447d1c920eb"
+};
+var my_token = "";
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+// --------------------------------
+// step 2 -------------------------
+// check grant permission? --------
+// --------------------------------
+
+const messaging = firebase.messaging();
+messaging.requestPermission()
+.then(function() {
+  console.log('Have Permission');
+
+})
+.catch(function(err) {
+  alert ("Error: Please grant the permission allow notification on the browser!!!");
+});
+
+
+// --------------------------------
+// step 3 -------------------------
+// Create a empty file? -----------
+// --------------------------------
+
+PUSH THE FILE firebase-messaging-sw.js to ROOT folder for receive chat (check cloud message from firebase)
+
+
+XAMPP/htdocs/firebase-messaging-sw.js
+
+don't have this file wil cause cant push
+
+
+// --------------------------------
+// step 4 -------------------------
+// get token from firebase --------
+// --------------------------------
+
+const messaging = firebase.messaging();
+messaging.requestPermission()
+.then(function() {
+  console.log('Have Permission');
+
+  return messaging.getToken();  // note: FOR GET TOKEN must -> create a empty file with name is: firebase-messaging-sw.js PUT on the ROOT: http://localhost/firebase-messaging-sw.js
+})
+.then(function(token) {
+    my_token = token
+    console.log(token);
+})
+.catch(function(err) {
+  alert ("Error: Please grant the permission allow notification on the browser!!!");
+});
+
+// --------------------------------
+// step 5 -------------------------
+// show message on Message when push 
+// --------------------------------
+
+messaging.onMessage(function(payload) {
+    console.log("onMessage: ", payload);
+});
+
+
+
+// --------------------------------
+// step 6 -------------------------
+// check on postman or use curl ---
+// --------------------------------
+
+curl --header "Authorization: key=AAAAbh_J-nI:APA91bGn1OssamQlG4R1v84yXOv-6oynz1i4eNltzQLd5ojIiFSHvnCFHJyA33QcRfeAMa5As2mjfEjkRA_1LfXA-YM8gsqEQssm3Ykrn8FSBENqwkot5KPWY0zMefYB1RZj1ZlZfsWy" --header "Content-Type: application/json" -d '{"to": "f8UQCp0VHqCrBR0I5Jr8x0:APA91bHuqLN7Wp40U2Wt8LS3VcRipttiViYF4TXHKP1Rusdov542XEgUYaVk9GIAEM3Q2kHcME5D85BsyWg7vk3H3oLhKJdNQLSNyoxzfnhGAvuQo4BiTZ43sIdVGQ7t86WQDn6s9HBj", "data": {"status": "New information!!!"}}' https://fcm.googleapis.com/fcm/send
+
+
+
+CHECKED:
+firefox -> ok (79.0 (64-bit)) MAC OS
+browser -> ok (Version 84.0.4147.125 (Official Build) (64-bit)) MAC OS
+safari -> cannot push (don't support firebase)
+IE -> cant check -> using MAC OS
